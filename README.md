@@ -183,3 +183,35 @@ The complete analyst report, including evidence exhibits and response analysis, 
 **Analyst:** Ivie Wilson  
 **Case ID:** SOC-IR-001  
 **Project Type:** Controlled SOC / Incident Response Lab
+
+## Investigation Evidence
+
+### 1. Wazuh Endpoint Overview
+
+The Windows endpoint was successfully enrolled in Wazuh and monitored for security events.
+
+![Wazuh Endpoint Overview](evidence/01-wazuh-endpoint-overview.png)
+
+### 2. Account Creation — Event ID 4720
+
+Windows Security Event ID 4720 recorded the creation of the local account `IR-Lab-User`.
+
+![Account Creation Event 4720](evidence/02-Account-Creation-Event-4720.png)
+
+### 3. Account Enabled — Event ID 4722
+
+Event ID 4722 confirmed that `IR-Lab-User` was enabled after creation.
+
+![Account Enabled Event 4722](evidence/03-Account-Enabled-Event-4722.png)
+
+### 4. Account Modification — Event ID 4738
+
+Event ID 4738 recorded subsequent changes to the `IR-Lab-User` account.
+
+![Account Modified Event 4738](evidence/04-Account-Modified-Events-4738.png)
+
+### 5. Privilege Escalation — Event ID 4732
+
+Event ID 4732 showed that the SID associated with `IR-Lab-User` was added to the local `Administrators` group.
+
+![Privilege Escalation Event 4732](evidence/05-Privilege-Escalation-Event-4732.png)
